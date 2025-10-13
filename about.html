@@ -14,13 +14,14 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
+    <link rel="stylesheet" href="css/output.css" />
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <script src="js/tailwind-3.4.16.js"></script>
-    <script src="js/tailwind.config.js"></script>
+    <!-- <script src="js/tailwind-3.4.16.js"></script>
+    <script src="js/tailwind.config.js"></script> -->
     <script src="js/aos.js"></script>
 
 </head>
@@ -45,44 +46,21 @@
                             </a>
                         </li>
 
-                        <li class="relative group">
-                            <a
-                                class="font-medium text-base flex items-center gap-2 relative transition-all duration-700 hover:text-primary">
+                        <li class="relative">
+                            <a href="about.html"
+                                class="text-primary font-medium text-base flex items-center gap-2 relative transition-all duration-700 hover:text-primary">
                                 About Us
-                                <svg xmlns="http://www.w3.org/2000/svg"
-                                    class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
-                                </svg>
                             </a>
-                            <ul
-                                class="absolute left-0 mt-9 bg-white shadow-lg w-72 opacity-0 invisible transform -translate-y-5 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 text-gray-800 z-50">
-                                <li><a href="about.html"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Clients</a>
-                                </li>
-                                <li><a href="about.html"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Services</a>
-                                </li>
-                                <li><a href="about.html" class="block px-4 py-2 hover:bg-primary hover:text-white">Why
-                                        choose
-                                        us</a></li>
-                                <li><a href="about.html"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Testimony</a>
-                                </li>
-                                <li><a href="about.html" class="block px-4 py-2 hover:bg-primary hover:text-white">How
-                                        we
-                                        work</a></li>
-                            </ul>
                         </li>
 
-                        <li class="relative group">
+                        <li class="relative">
                             <a href="jobs.html"
                                 class="font-medium text-base flex relative hover:text-primary transition-all duration-700">
                                 View Open Jobs
                             </a>
                         </li>
 
-                        <li class="relative group">
+                        <li class="relative">
                             <a href="contact.html"
                                 class="font-medium text-base flex relative hover:text-primary transition-all duration-700">
                                 Contact Us
@@ -232,88 +210,79 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 w-full font-poppins">
                 <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
                     <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
+                        <img src="images/understanding-needs.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
+                        <h3 class="text-lg font-semibold text-gray-900">Understanding Needs</h3>
+                        <p class="text-sm text-gray-500">We work closely with employers to understand their workforce
+                            requirements
+                            and culture.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
                     <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
+                        <img src="images/candidate-sourcing.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
+                            alt="" />
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
+                        <h3 class="text-lg font-semibold text-gray-900">Candidate Sourcing</h3>
+                        <p class="text-sm text-gray-500">We identify talent locally and overseas that matches the job
+                            and business
+                            needs.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
                     <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
+                        <img src="images/screening-assessment.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
+                            alt="" />
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
+                        <h3 class="text-lg font-semibold text-gray-900">Screening & Assessment</h3>
+                        <p class="text-sm text-gray-500"> We carefully evaluate skills, experience, and suitability,
+                            including
+                            background checks and verification.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
                     <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
+                        <img src="images/training-preparation.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
+                            alt="" />
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
+                        <h3 class="text-lg font-semibold text-gray-900">Training & Preparation</h3>
+                        <p class="text-sm text-gray-500">For overseas candidates, we provide workplace transition
+                            training and
+                            guidance to ensure they adapt smoothly.</p>
                     </div>
                 </div>
 
                 <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
                     <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
+                        <img src="images/placementsupport.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
+                            alt="" />
                     </div>
                     <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
-                    <div class="w-1/6 h-full flex items-center">
-                        <img src="images/banner-1.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-lg font-semibold text-gray-900">Development</h3>
-                        <p class="text-sm text-gray-500">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam,
-                            magnam
-                            adipisci, eius quidem </p>
+                        <h3 class="text-lg font-semibold text-gray-900">Placement & Support</h3>
+                        <p class="text-sm text-gray-500"> We guide both employers and candidates through the onboarding
+                            process,
+                            including visa and migration support when needed.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full mt-16 flex justify-center">
-                <button type="button"
-                    class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-                    View More
-                    <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
-            </div>
+            <!-- <div class="w-full mt-16 flex justify-center">
+        <button type="button"
+          class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+          View More
+          <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div> -->
         </section>
 
         <section class="border-b py-20 px-4 lg:px-20" data-aos="fade-up" data-aos-duration="1000">
@@ -469,6 +438,7 @@
 
     <script>
         AOS.init();
+
         const navbar = document.getElementById('mainNavbar');
         const nav = document.getElementById('nav');
 
