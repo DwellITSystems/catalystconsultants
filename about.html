@@ -32,8 +32,7 @@
             <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-6">
                 <div class="w-fit">
                     <a href="index.html" class="text-primary uppercase font-normal text-2xl">
-                        <!-- <img src="images/logo.png" alt="logo" class="h-20" /> -->
-                        Logo
+                        <img src="images/logo.png" alt="logo" class="h-20" />
                     </a>
                 </div>
 
@@ -46,11 +45,23 @@
                             </a>
                         </li>
 
-                        <li class="relative">
-                            <a href="about.html"
-                                class="text-primary font-medium text-base flex items-center gap-2 relative transition-all duration-700 hover:text-primary">
+                        <li class="relative group">
+                            <a
+                                class="font-medium text-base flex items-center gap-2 relative transition-all duration-700 hover:text-primary">
                                 About Us
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                                </svg>
                             </a>
+                            <ul
+                                class="absolute left-0 mt-9 bg-white shadow-lg w-72 opacity-0 invisible transform -translate-y-5 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 text-gray-800 z-50">
+                                <li><a href="about.html#whychooseus"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Why choose us</a></li>
+                                <li><a href="about.html#whoweare"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Who we are</a></li>
+                            </ul>
                         </li>
 
                         <li class="relative">
@@ -103,7 +114,7 @@
             </div>
         </section>
 
-        <section class="w-full py-12 bg-gray-100 border-b" data-aos="fade-up" data-aos-duration="1000">
+        <section class="w-full py-12 bg-white border-b" data-aos="fade-up" data-aos-duration="1000">
             <div class="swiper client-logo-slider">
                 <div class="swiper-wrapper items-center">
                     <div class="swiper-slide flex justify-center">
@@ -139,7 +150,108 @@
             </div>
         </section>
 
-        <section class="w-full px-20 py-20 bg-white" data-aos="fade-up" data-aos-duration="1000">
+        <section class="w-full max-md:px-6 px-20 py-20 bg-gray-100 border-b" data-aos="fade-up"
+            data-aos-duration="1000">
+            <div class="w-full text-center">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">About Us</h2>
+                <p>Empowering People. Strengthening Businesses. Building Communities.</p>
+            </div>
+
+            <div class="w-full flex gap-20 mt-12">
+                <div class="w-full">
+                    <img src="images/banner-1.jpg" alt="Why Choose Us"
+                        class="w-full h-full rounded-lg shadow-lg object-cover" />
+                </div>
+
+                <div class="w-full flex flex-col items-center">
+                    <p class="text-black text-md mb-5">
+                        At CATALYST, we believe that meaningful connections have the power to transform lives,
+                        businesses, and entire communities.
+                    </p>
+
+                    <p class="text-black text-md mb-5">
+                        We are not just recruiters — we are connectors, enablers, and change-makers, bridging local and
+                        global talent to power Australia’s evolving workforce.
+                    </p>
+
+                    <p class="text-black text-md mb-5">
+                        We understand that behind every job placement is a story — a business looking to grow, a skilled
+                        individual seeking a new beginning, and a community ready to prosper. That’s why we go beyond
+                        recruitment. We act as a true catalyst — bringing together the right people, the right roles,
+                        and the right purpose.
+                    </p>
+
+                    <p class="text-black text-md mb-5">
+                        Our mission is clear — to connect people with purpose, helping Australian businesses thrive
+                        while creating new opportunities for skilled professionals from across the globe. Every
+                        connection we make strengthens the communities we serve — from bustling cities to regional
+                        heartlands that form the backbone of Australia’s economy.
+                    </p>
+
+                    <p class="text-black text-md mb-5">
+                        We understand that behind every successful business is a team of capable, committed individuals.
+                        And behind every candidate is a dream — a dream to contribute, to grow, and to belong.
+                    </p>
+
+                    <p class="text-black text-md">
+                        That’s where CATALYST steps in — making that connection happen, seamlessly and meaningfully.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="bg-white text-gray-900 px-20 py-20 font-poppins" id="whychooseus" data-aos="fade-up"
+            data-aos-duration="1000">
+            <div class="max-full mx-auto flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Why Choose Us</h2>
+
+                    <p class="text-black text-md">
+                        At CATALYST, we don’t just recruit — we understand both sides of the journey. Having moved and
+                        worked in
+                        Australia ourselves, we know what it takes for candidates to succeed, and what employers are
+                        truly looking
+                        for. Our mission is to empower communities, connect talent with opportunity, and create win-win
+                        outcomes.
+                    </p>
+
+                    <ul class="list-disc list-inside space-y-3 text-md text-black">
+                        <li>Local expertise, global perspective — we know how to navigate both Australian and overseas
+                            recruitment
+                            landscapes.</li>
+                        <li>People-first approach — every candidate and employer is treated as a priority.</li>
+                        <li>Proven impact — over 20 candidates successfully placed and thriving in Australian
+                            workplaces.</li>
+                        <li>Community-driven — we help businesses and regional areas grow by connecting the right
+                            talent.</li>
+                        <li>Tailored solutions — practical support for candidates (training, visas) and employers
+                            (screening,
+                            verification, transition guidance).
+                        </li>
+                    </ul>
+
+                    <a href="#"
+                        class="px-10 py-4 w-fit bg-primary text-white uppercase rounded hover:bg-primary/70 group flex items-center text-sm font-medium">
+                        Learn More
+                        <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="w-full lg:w-1/2 h-full flex items-center">
+                    <img src="images/banner-1.jpg" alt="Why Choose Us"
+                        class="w-full h-full rounded-lg shadow-lg object-cover" />
+                </div>
+
+            </div>
+        </section>
+
+        <section class="w-full px-20 py-20 bg-gray-100 border-b border-t" id="whoweare" data-aos="fade-up"
+            data-aos-duration="1000">
             <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
                 <div class="w-full lg:w-1/2">
                     <img src="/images/banner-2.jpg" alt="About Image" class="rounded-lg shadow-lg w-full h-auto">
@@ -199,76 +311,99 @@
             </div>
         </section>
 
-        <section class="bg-gray-100 border-b border-t py-20 px-20" data-aos="fade-up" data-aos-duration="1000">
+        <section class="bg-white border-b border-t py-20 px-20" data-aos="fade-up" data-aos-duration="1000">
             <div class="max-w-7xl mx-auto text-center mb-12">
-                <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Services</h2>
+                <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Recruitment Process</h2>
                 <p class="text-black text-md">
-                    We offer a wide range of high-quality services tailored to your business needs.
+                    Our process is designed to be thorough, efficient, and people-focused
                 </p>
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6 w-full font-poppins">
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
+                <div class="bg-gray-100/50 border p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="1000">
                     <div class="w-1/6 h-full flex items-center">
                         <img src="images/understanding-needs.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-900">Understanding Needs</h3>
-                        <p class="text-sm text-gray-500">We work closely with employers to understand their workforce
+                        <p class="text-[13px] text-gray-500">We work closely with employers to understand their
+                            workforce
                             requirements
                             and culture.</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
+                <div class="bg-gray-100/50 border p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="1200">
                     <div class="w-1/6 h-full flex items-center">
                         <img src="images/candidate-sourcing.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
                             alt="" />
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-900">Candidate Sourcing</h3>
-                        <p class="text-sm text-gray-500">We identify talent locally and overseas that matches the job
-                            and business
+                        <p class="text-[13px] text-gray-500">We identify talent locally and overseas that matches the
+                            job and
+                            business
                             needs.</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
+                <div class="bg-gray-100/50 border p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="1400">
                     <div class="w-1/6 h-full flex items-center">
                         <img src="images/screening-assessment.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
                             alt="" />
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-900">Screening & Assessment</h3>
-                        <p class="text-sm text-gray-500"> We carefully evaluate skills, experience, and suitability,
+                        <p class="text-[13px] text-gray-500"> We carefully evaluate skills, experience, and suitability,
                             including
                             background checks and verification.</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
+                <div class="bg-gray-100/50 border p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="1600">
                     <div class="w-1/6 h-full flex items-center">
                         <img src="images/training-preparation.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
                             alt="" />
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-900">Training & Preparation</h3>
-                        <p class="text-sm text-gray-500">For overseas candidates, we provide workplace transition
+                        <p class="text-[13px] text-gray-500">For overseas candidates, we provide workplace transition
                             training and
                             guidance to ensure they adapt smoothly.</p>
                     </div>
                 </div>
 
-                <div class="bg-white p-4 rounded shadow hover:shadow-md transition flex items-start gap-4 relative">
+                <div class="bg-gray-100/50 border  p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="1800">
                     <div class="w-1/6 h-full flex items-center">
                         <img src="images/placementsupport.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
                             alt="" />
                     </div>
                     <div class="flex-1">
                         <h3 class="text-lg font-semibold text-gray-900">Placement & Support</h3>
-                        <p class="text-sm text-gray-500"> We guide both employers and candidates through the onboarding
-                            process,
+                        <p class="text-[13px] text-gray-500"> We guide both employers and candidates through the
+                            onboarding process,
                             including visa and migration support when needed.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100/50 border  p-4 rounded transition flex items-start gap-4 relative"
+                    data-aos="fade-up" data-aos-duration="2000">
+                    <div class="w-1/6 h-full flex items-center">
+                        <img src="images/onboarding-readiness.jpg" class="w-full h-[4.4rem] rounded-full object-cover"
+                            alt="" />
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-lg font-semibold text-gray-900">Onboarding Readiness</h3>
+                        <p class="text-[13px] text-gray-500">
+                            We ensure every selected candidate is fully equipped before joining from documentation and
+                            compliance to
+                            cultural orientation — so they’re ready to contribute from day one.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -285,6 +420,7 @@
       </div> -->
         </section>
 
+        <!---
         <section class="border-b py-20 px-4 lg:px-20" data-aos="fade-up" data-aos-duration="1000">
             <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
@@ -327,8 +463,7 @@
 
                     <div class="swiper testimonial-swiper mt-12">
                         <div class="swiper-wrapper pb-20">
-
-                            <!-- Testimonial 1 -->
+                            
                             <div class="swiper-slide bg-white p-6 rounded-lg shadow text-center">
                                 <img src="images/banner-1.jpg" alt="Sarah Johnson"
                                     class="w-14 h-14 rounded-full mx-auto mb-3 object-cover" />
@@ -339,8 +474,7 @@
                                 <h4 class="text-lg font-semibold text-primary">Sarah Johnson</h4>
                                 <span class="text-sm text-gray-500">Marketing Director</span>
                             </div>
-
-                            <!-- Testimonial 2 -->
+                            
                             <div class="swiper-slide bg-white p-6 rounded-lg shadow text-center">
                                 <img src="images/banner-1.jpg" alt="Sarah Johnson"
                                     class="w-14 h-14 rounded-full mx-auto mb-3 object-cover" />
@@ -351,8 +485,7 @@
                                 <h4 class="text-lg font-semibold text-primary">Sarah Johnson</h4>
                                 <span class="text-sm text-gray-500">Marketing Director</span>
                             </div>
-
-                            <!-- Testimonial 3 -->
+                            
                             <div class="swiper-slide bg-white p-6 rounded-lg shadow text-center">
                                 <img src="images/banner-1.jpg" alt="Sarah Johnson"
                                     class="w-14 h-14 rounded-full mx-auto mb-3 object-cover" />
@@ -371,6 +504,8 @@
                 </div>
             </div>
         </section>
+
+        --->
 
 
         <footer class="bg-gray-900 text-white py-12 px-6" data-aos="fade-up" data-aos-duration="1000">
