@@ -1919,6 +1919,14 @@ video {
 }
 
 @media not all and (min-width: 1024px) {
+  .max-lg\:block {
+    display: block;
+  }
+
+  .max-lg\:hidden {
+    display: none;
+  }
+
   .max-lg\:h-full {
     height: 100%;
   }
@@ -1931,6 +1939,10 @@ video {
 @media not all and (min-width: 768px) {
   .max-md\:mb-12 {
     margin-bottom: 3rem;
+  }
+
+  .max-md\:block {
+    display: block;
   }
 
   .max-md\:px-6 {
