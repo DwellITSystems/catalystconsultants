@@ -79,8 +79,8 @@
 	transition: max-height 0.4s ease-in-out;
 }
 
-.slide-toggle.open {
-	max-height: 500px;
+.open-slideToggle {
+    max-height: 500px;
 }
 
 .loader-container {

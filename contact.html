@@ -28,12 +28,11 @@
 
 <body>
     <div class="w-full h-full font-poppins" id="content">
-        <header class="w-full px-12 fixed z-20" id="mainNavbar">
+        <header class="w-full max-md:px-6  px-12 fixed z-20" id="mainNavbar">
             <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-6">
                 <div class="w-fit">
                     <a href="index.html" class="text-primary uppercase font-normal text-2xl">
-                        <!-- <img src="images/logo.png" alt="logo" class="h-20" /> -->
-                        Logo
+                        <img src="images/logo.png" alt="logo" class="h-20" />
                     </a>
                 </div>
 
@@ -41,7 +40,7 @@
                     <ul class="flex gap-12 mx-auto">
                         <li class="relative">
                             <a href="index.html"
-                                class="font-medium text-base flex relative hover:text-primary transition-all duration-700">
+                                class="text-primary font-medium text-base flex relative hover:text-primary transition-all duration-700">
                                 Home
                             </a>
                         </li>
@@ -58,23 +57,28 @@
                             </a>
                             <ul
                                 class="absolute left-0 mt-9 bg-white shadow-lg w-72 opacity-0 invisible transform -translate-y-5 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 text-gray-800 z-50">
+                                <li><a href="about.html#aboutus"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">About
+                                        Us</a></li>
                                 <li><a href="about.html#whychooseus"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Why choose us</a></li>
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Why
+                                        choose us</a></li>
                                 <li><a href="about.html#whoweare"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Who we are</a></li>
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Who we
+                                        are</a></li>
                             </ul>
                         </li>
 
-                        <li class="relative group">
+                        <li class="relative">
                             <a href="jobs.html"
                                 class="font-medium text-base flex relative hover:text-primary transition-all duration-700">
                                 View Open Jobs
                             </a>
                         </li>
 
-                        <li class="relative group">
+                        <li class="relative">
                             <a href="contact.html"
-                                class="text-primary font-medium text-base flex relative hover:text-primary transition-all duration-700">
+                                class="font-medium text-base flex relative hover:text-primary transition-all duration-700">
                                 Contact Us
                             </a>
                         </li>
@@ -82,12 +86,12 @@
 
                     <div class="flex items-center gap-8">
                         <div class="text-base font-semibold whitespace-nowrap">
-                            <i class="fas fa-phone mr-2"></i> +1 (800) 123-4567
+                            <i class="fas fa-phone mr-2"></i> +61481351341
                         </div>
 
-                        <button type="button"
+                        <button type="button" id="request-callback-btn"
                             class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-                            Book Consult
+                            Drop your Resume
                             <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
                                 stroke-width="2">
@@ -96,8 +100,78 @@
                         </button>
                     </div>
                 </nav>
+
+                <button id="sideToggleBtn" class="text-gray-600 xl:hidden focus:outline-none group">
+                    <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.19 24">
+                        <!-- Top line moves right on hover -->
+                        <line x2="31.19" y1="1" y2="1"
+                            class="transition-transform duration-500 ease-in-out group-hover:translate-x-3" fill="none"
+                            stroke="currentColor" stroke-width="2" />
+                        <line x2="41.19" y1="11" y2="11"
+                            class="transition-transform duration-500 ease-in-out origin-left" fill="none"
+                            stroke="currentColor" stroke-width="2" />
+                        <line x2="21.19" y1="21" y2="21"
+                            class="transition-transform duration-500 ease-in-out group-hover:translate-x-5" fill="none"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
             </div>
         </header>
+
+        <div id="sideMenu"
+            class="xl:hidden fixed top-0 right-0 h-screen w-full xl:w-96 bg-white shadow-lg transform translate-x-full transition-transform duration-500 ease-in-out z-50 flex flex-col">
+            <div class="p-6 overflow-y-auto flex-1">
+                <div class="w-full flex items-center justify-between">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="logo" width="125" height="48">
+                    </a>
+                    <button id="closeSideMenu" class="text-gray-600 hover:text-sky-600 group">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-6 w-6 transition-transform duration-300 group-hover:rotate-90" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-12 space-y-6 text-md font-medium text-gray-700">
+                    <li><a href="index.html" class="block hover:text-sky-600">Home</a></li>
+                    <li>
+                        <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
+                            data-toggle="aboutMenu">
+                            About US
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <ul id="aboutMenu" class="slide-toggle ml-4 space-y-4 text-sm text-gray-600">
+                            <li><a href="about.html#aboutus" class="block hover:text-sky-600">About US</a></li>
+                            <li>
+                                <a href="about.html#whychooseus" class="block hover:text-sky-600">Why Choose US</a>
+                            </li>
+                            <li>
+                                <a href="about.html#whoweare" class="block hover:text-sky-600">Who We Are</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="jobs.html" class="block hover:text-sky-600">View Open Jobs</a></li>
+                    <li><a href="contact.html" class="block hover:text-sky-600">Contact US</a></li>
+                </ul>
+
+                <button type="button" id="request-mob-callback-btn"
+                    class="flex group font-normal uppercase text-14 mt-10 w-full justify-center font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+                    Drop your Resume
+                    <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
 
         <section class="relative bg-cover bg-[0_-225px] bg-no-repeat py-44"
             style="background-image: url('./images/jobs.jpg');">
@@ -126,8 +200,7 @@
                                     d="M17.657 16.657L13.414 12.414a1 1 0 010-1.414l1.243-1.243a1 1 0 011.414 0L20 14.343M6 9a9 9 0 0118 0c0 5-4.03 9-9 9a9 9 0 01-9-9z" />
                             </svg>
                             <p>
-                                Life Coach Deepa Divaakar Anchoring & Spoken English Training Institute,<br>
-                                XYZ Road, Ernakulam, Kerala - 682XXX, India
+                                3/26 Clayton street, Hermit Park 4812 QLD ABN 17 357 248 231
                             </p>
                         </div>
 
@@ -137,7 +210,8 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
                             </svg>
-                            <a href="mailto:info@example.com" class="hover:underline">info@example.com</a>
+                            <a href="mailto:info@catalystconsultants.au"
+                                class="hover:underline">info@catalystconsultants.au</a>
                         </div>
 
                         <div class="flex items-center gap-3">
@@ -146,38 +220,38 @@
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3 5h2l3.6 7.59L5.25 17h13.5l-3.35-4.41L19 5H5" />
                             </svg>
-                            <a href="tel:+919876543210" class="hover:underline">+91 98765 43210</a>
+                            <a href="tel:+61481351341" class="hover:underline">+61481351341</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white shadow-md rounded-lg p-8">
-                    <form class="space-y-4">
+                    <form class="space-y-4" action="send-contact.php" method="POST">
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Name</label>
-                            <input type="text" placeholder="Your name"
+                            <input type="text" placeholder="Your name" id="name" name="name"
                                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Email</label>
-                            <input type="email" placeholder="Your email"
+                            <input type="email" placeholder="Your email" id="email" name="email"
                                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Phone</label>
-                            <input type="text" placeholder="Your phone"
+                            <input type="text" placeholder="Your phone" name="phone" id="phone"
                                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
                         </div>
 
                         <div>
                             <label class="block text-sm font-medium text-gray-700">Message</label>
-                            <textarea rows="4" placeholder="Write your message here..."
+                            <textarea rows="4" placeholder="Write your message here..." id="message" name="message"
                                 class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                         </div>
 
-                        <button type="button"
+                        <button type="submit"
                             class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
                             Send Message
                             <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
@@ -199,228 +273,152 @@
             </iframe>
         </section>
 
-        <footer class="bg-gray-900 text-white py-12 px-6" data-aos="fade-up" data-aos-duration="1000">
-            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <footer class="bg-gray-300 text-black py-16 px-6" data-aos="fade-up" data-aos-duration="1000">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 font-poppins">
                 <div>
-                    <h2 class="text-2xl font-bold mb-4">Logo</h2>
-                    <p class="text-gray-400 text-sm">
-                        We help businesses grow by building scalable digital solutions and human-centered
-                        experiences.
-                    </p>
+                    <a href="index.html" class="text-primary uppercase font-normal text-2xl">
+                        <img src="images/logo.png" alt="logo" class="h-24" />
+                    </a>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Our Services</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">Web Development</a></li>
-                        <li><a href="#" class="hover:text-white transition">UI/UX Design</a></li>
-                        <li><a href="#" class="hover:text-white transition">Digital Marketing</a></li>
-                        <li><a href="#" class="hover:text-white transition">Branding</a></li>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Company</h3>
+                    <ul class="space-y-2 text-sm text-gray-800">
+                        <li><a href="about.html#aboutus" class="hover:text-primary hover:font-medium transition">About
+                                US</a></li>
+                        <li><a href="jobs.html" class="hover:text-primary hover:font-medium transition">View Open
+                                Jobs</a></li>
+                        <li><a href="contact.html" class="hover:text-primary hover:font-medium transition">Contact
+                                Us</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Explore</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#" class="hover:text-white transition">Contact</a></li>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Explore</h3>
+                    <ul class="space-y-2 text-sm text-gray-800">
+                        <li><a href="about.html#whychooseus" class="hover:text-primary hover:font-medium transition">Why
+                                Choose
+                                US</a></li>
+                        <li><a href="about.html#whoweare" class="hover:text-primary hover:font-medium transition">Who We
+                                Are</a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- Address / Contact Info -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4 text-white">Contact Us</h3>
+                    <h3 class="text-lg font-semibold mb-4 text-gray-800">Contact Us</h3>
 
-                    <p class="text-sm text-gray-400 mb-2 flex items-center gap-2">
+                    <p class="text-sm text-gray-800 mb-2 flex items-center gap-2">
                         <i class="fas fa-map-marker-alt text-primary"></i>
-                        123 Main Street, New York, NY 10001
+                        3/26 Clayton street, Hermit Park 4812 QLD ABN 17 357 248 231
                     </p>
 
-                    <p class="text-sm text-gray-400 mb-2 flex items-center gap-2">
+                    <p class="text-sm text-gray-800 mb-2 flex items-center gap-2">
                         <i class="fas fa-phone text-primary"></i>
-                        +1 (800) 123-4567
+                        +61481351341
                     </p>
 
-                    <p class="text-sm text-gray-400 flex items-center gap-2">
+                    <p class="text-sm text-gray-800 flex items-center gap-2">
                         <i class="fas fa-envelope text-primary"></i>
-                        info@example.com
+                        info@catalystconsultants.au
                     </p>
                 </div>
 
             </div>
 
             <!-- Bottom Bar -->
-            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
-                © 2025 YourCompany. All rights reserved.
+            <div class="mt-12 border-t border-gray-400/50 pt-12 text-center text-sm text-gray-800">
+                <p class="mb-0">© 2025 Catalyst Consult. All rights reserved.</p>
             </div>
         </footer>
+    </div>
 
+    <div id="request-callback-popup" class="fixed inset-0 hidden z-50 items-center justify-center bg-black">
+        <div
+            class="bg-white w-full max-w-full xl:max-w-xl shadow-lg relative flex flex-col max-h-[90vh] animate-slide-down">
+            <div class="flex justify-between items-center border-b py-2 px-8 bg-gray-500">
+                <h2 class="text-lg font-normal text-white font-poppins">Request Callback</h2>
+                <button id="request-closeModal-Btn"
+                    class=" text-white hover:text-white/50 text-3xl font-thin">&times;</button>
+            </div>
+            <div class="overflow-y-auto px-8 py-5 flex-1">
+                <form class="space-y-2" action="request-callback.php" method="POST" method="POST">
+                    <div class="w-full flex gap-4 flex-col">
+                        <div class="w-full">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" name="name" placeholder="Your Name"
+                                class="w-full border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
 
+                        <div class="w-full">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" name="email" placeholder="Email"
+                                class="w-full border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
 
+                        <div class="w-full">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                            <input type="tel" name="phone" placeholder="Phone Number"
+                                class="w-full border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
 
+                        <div class="w-full">
+                            <span class="block text-sm font-medium text-gray-700 mb-1">Currently in Australia</span>
+                            <div class="flex items-center gap-6 text-sm text-gray-700">
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="employed" value="yes"
+                                        class="text-blue-600 focus:ring-blue-500" required>
+                                    Yes
+                                </label>
+                                <label class="flex items-center gap-2">
+                                    <input type="radio" name="employed" value="no"
+                                        class="text-blue-600 focus:ring-blue-500">
+                                    No
+                                </label>
+                            </div>
+                        </div>
 
+                        <div class="w-full">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Attach Resume</label>
+                            <input type="file" name="file" placeholder="Upload Resume"
+                                class="w-full border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                                required>
+                        </div>
+
+                        <div class="w-full">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea name="message" placeholder="Message" rows="2"
+                                class="w-full border px-2 py-2 text-left focus:outline-none focus:ring-2 focus:ring-blue-400">
+                            </textarea>
+                        </div>
+
+                        <div class="text-center w-full flex justify-center">
+                            <button type="submit"
+                                class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+                                Submit Request
+                                <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/custom.js"></script>
 
-
-    <script>
-        const navbar = document.getElementById('mainNavbar');
-        const nav = document.getElementById('nav');
-        AOS.init();
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                navbar.classList.add('bg-white', 'shadow-md');
-                nav.classList.remove('text-white');
-                nav.classList.add('text-gray-900');
-            } else {
-                navbar.classList.remove('bg-white', 'shadow-md');
-                nav.classList.remove('text-gray-900');
-                nav.classList.add('text-white');
-            }
-        });
-
-        const bannerSwiper = new Swiper('.banner-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            pagination: {
-                el: '.testimonial-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000, // Time in ms (5000 = 3 seconds)
-                disableOnInteraction: false, // Autoplay won't stop after user interaction
-            },
-            loop: true,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 1,
-                },
-                1024: {
-                    slidesPerView: 1,
-                },
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
-        });
-
-        const clientSwiper = new Swiper('.client-logo-slider', {
-            slidesPerView: 2,
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 3,
-                },
-                768: {
-                    slidesPerView: 4,
-                },
-                1024: {
-                    slidesPerView: 5,
-                },
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-
-        const productSwiper = new Swiper('.product-slider', {
-            loop: true,
-            spaceBetween: 20,
-            slidesPerView: 1,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
-            }
-        });
-
-        const testimonialSwiper = new Swiper('.testimonial-swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-            },
-        });
-    </script>
-
-    <!-- Code injected by live-server -->
-    <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
-    </script>
 </body>
 
 </html>
