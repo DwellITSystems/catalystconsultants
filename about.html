@@ -4,8 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Catalyst Consultants</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +26,7 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 
     <!-- <script src="js/tailwind-3.4.16.js"></script>
     <script src="js/tailwind.config.js"></script> -->
@@ -48,7 +56,7 @@
                         <li class="relative group">
                             <a
                                 class="font-medium text-base flex items-center gap-2 relative transition-all duration-700 hover:text-primary">
-                                About Us
+                                How We Deliver
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                     class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
                                     viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -58,14 +66,17 @@
                             <ul
                                 class="absolute left-0 mt-9 bg-white shadow-lg w-72 opacity-0 invisible transform -translate-y-5 transition-all duration-700 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 text-gray-800 z-50">
                                 <li><a href="about.html#aboutus"
-                                        class="block px-4 py-2 hover:bg-primary hover:text-white">About
-                                        Us</a></li>
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">About Us</a>
+                                </li>
                                 <li><a href="about.html#whychooseus"
                                         class="block px-4 py-2 hover:bg-primary hover:text-white">Why
                                         choose us</a></li>
                                 <li><a href="about.html#whoweare"
                                         class="block px-4 py-2 hover:bg-primary hover:text-white">Who we
                                         are</a></li>
+                                <li><a href="about.html#ourrecruitmentprocess"
+                                        class="block px-4 py-2 hover:bg-primary hover:text-white">Our
+                                        Recruitment Process</a></li>
                             </ul>
                         </li>
 
@@ -86,7 +97,7 @@
 
                     <div class="flex items-center gap-8">
                         <div class="text-base font-semibold whitespace-nowrap">
-                            <i class="fas fa-phone mr-2"></i> +61481351341
+                            <i class="fas fa-phone mr-2"></i><a href="tel:+61 481 351 341"> +61 481 351 341</a>
                         </div>
 
                         <button type="button" id="request-callback-btn"
@@ -139,7 +150,7 @@
                     <li>
                         <button class="flex justify-between items-center w-full text-left hover:text-sky-600"
                             data-toggle="aboutMenu">
-                            About US
+                            How We Deliver
                             <svg xmlns="http://www.w3.org/2000/svg"
                                 class="w-4 h-4 transform transition-transform duration-300" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2">
@@ -153,6 +164,10 @@
                             </li>
                             <li>
                                 <a href="about.html#whoweare" class="block hover:text-sky-600">Who We Are</a>
+                            </li>
+                            <li>
+                                <a href="about.html#ourrecruitmentprocess" class="block hover:text-sky-600">Our
+                                    Recruitment Process</a>
                             </li>
                         </ul>
                     </li>
@@ -292,20 +307,70 @@
 
             <div class="w-full h-full flex flex-col lg:flex-row items-center gap-20 mt-12">
                 <div class="w-full">
-                    <ul class="list-disc list-outside pl-6 space-y-4 text-sm text-black font-poppins">
-                        <li>Local expertise, global perspective — we know how to navigate both Australian and overseas
-                            recruitment
-                            landscapes.</li>
-                        <li>People-first approach — every candidate and employer is treated as a priority.</li>
-                        <li>Proven impact — over 20 candidates successfully placed and thriving in Australian
-                            workplaces.</li>
-                        <li>Community-driven — we help businesses and regional areas grow by connecting the right
-                            talent.</li>
-                        <li>Tailored solutions — practical support for candidates (training, visas) and employers
-                            (screening,
-                            verification, transition guidance).
+                    <ul class="space-y-6 text-sm text-black font-poppins">
+                        <!-- Item 1 -->
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="bg-sky-100 text-sky-600 p-3 w-14 h-14 flex items-center justify-center rounded-full text-xl">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <p class="flex-1 my-auto">
+                                <strong>Local expertise, global perspective</strong> — we know how to navigate both
+                                Australian and overseas recruitment landscapes.
+                            </p>
+                        </li>
+
+                        <!-- Item 2 -->
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="bg-pink-100 text-pink-600 p-3 w-14 h-14 flex items-center justify-center rounded-full text-xl">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <p class="flex-1 my-auto">
+                                <strong>People-first approach</strong> — every candidate and employer is treated as a
+                                priority.
+                            </p>
+                        </li>
+
+                        <!-- Item 3 -->
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="bg-green-100 text-green-600 p-3 w-14 h-14 flex items-center justify-center rounded-full text-xl">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <p class="flex-1 my-auto">
+                                <strong>Proven impact</strong> — over 20 candidates successfully placed and thriving in
+                                Australian workplaces.
+                            </p>
+                        </li>
+
+                        <!-- Item 4 -->
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="bg-yellow-100 text-yellow-600 p-3 w-14 h-14 flex items-center justify-center rounded-full text-xl">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <p class="flex-1 my-auto">
+                                <strong>Community-driven</strong> — we help businesses and regional areas grow by
+                                connecting the right talent.
+                            </p>
+                        </li>
+
+                        <!-- Item 5 -->
+                        <li class="flex items-start gap-4">
+                            <div
+                                class="bg-purple-100 text-purple-600 p-3 w-14 h-14 flex items-center justify-center rounded-full text-xl">
+                                <i class="fa-solid fa-toolbox"></i>
+                            </div>
+
+                            <p class="flex-1 my-auto">
+                                <strong>Tailored solutions</strong> — practical support for candidates (training, visas)
+                                and employers (screening, verification, transition guidance).
+                            </p>
                         </li>
                     </ul>
+
+
                 </div>
 
                 <div class="w-full">
@@ -377,7 +442,8 @@
             </div>
         </section>
 
-        <section class="bg-white border-b border-t py-20 max-md:px-6 px-20" data-aos="fade-up" data-aos-duration="1000">
+        <section class="bg-white border-b border-t py-20 max-md:px-6 px-20" id="ourrecruitmentprocess"
+            data-aos="fade-up" data-aos-duration="1000">
             <div class="max-w-7xl mx-auto text-center mb-12">
                 <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Recruitment Process</h2>
                 <p class="text-black text-md">
@@ -632,12 +698,12 @@
 
                     <p class="text-sm text-gray-800 mb-2 flex items-center gap-2">
                         <i class="fas fa-phone text-primary"></i>
-                        +61481351341
+                        +61 481 351 341
                     </p>
 
                     <p class="text-sm text-gray-800 flex items-center gap-2">
                         <i class="fas fa-envelope text-primary"></i>
-                        info@catalystconsultants.au
+                        <a href="mailto:info@catalystconsultants.au">info@catalystconsultants.au</a>
                     </p>
                 </div>
 
@@ -645,6 +711,7 @@
 
             <!-- Bottom Bar -->
             <div class="mt-12 border-t border-gray-400/50 pt-12 text-center text-sm text-gray-800">
+                <p class="font-medium text-primary mb-4">ABN 17 357 248 231</p>
                 <p class="mb-0">© 2025 Catalyst Consult. Developed By <a href="https://dwellitsystems.com/"
                         target="_blank" class="text-primary">DwellIT Systems.</a></p>
             </div>
