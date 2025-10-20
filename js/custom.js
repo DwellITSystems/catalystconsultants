@@ -168,7 +168,7 @@ jQuery(document).ready(function () {
 
 
     jQuery("#request-callback-btn, #request-mob-callback-btn").click(function () {
-        jQuery("#job-details-popup").removeClass('hidden').addClass('flex');
+        jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
     });
 
     jQuery("#request-closeModal-Btn").click(function () {
