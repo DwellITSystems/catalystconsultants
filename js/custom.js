@@ -168,7 +168,11 @@ jQuery(document).ready(function () {
 
 
     jQuery("#request-callback-btn, #request-mob-callback-btn").click(function () {
-        jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
+        jQuery("#drop-your-resume-popup").removeClass('hidden').addClass('flex');
+    });
+
+    jQuery("#drop-your-resume-closeModal-Btn").click(function () {
+        jQuery("#drop-your-resume-popup").removeClass('flex').addClass('hidden');
     });
 
     jQuery("#request-closeModal-Btn").click(function () {
