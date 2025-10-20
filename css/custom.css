@@ -110,3 +110,25 @@
 .rotate {
 	animation: rotate 3s linear infinite;
 }
+
+.swiper-wrapper::after{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;	
+	background: linear-gradient(to bottom, transparent, #fff);
+	z-index: 10;
+}
+
+@media (max-width: 767px) {
+	.swiper-wrapper::after{
+		height: 60%;
+	}
+}
+
+@media (min-width: 767px) {
+	.swiper-wrapper::after{
+		height: 30%;
+	}
+}
