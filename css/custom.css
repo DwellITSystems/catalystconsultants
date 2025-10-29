@@ -110,3 +110,11 @@
 .rotate {
 	animation: rotate 3s linear infinite;
 }
+
+body .swiper-pagination-bullet-active{
+	background: rgba(var(--primary-color)) !important;
+}
+
+.swiper-pagination-bullet{
+	background: #a9a8a8 !important;
+}
