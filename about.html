@@ -35,12 +35,15 @@
 </head>
 
 <body>
+    <div class="bg-black w-full h-screen flex items-center justify-center" id="loader">
+        <img src="images/infinite-spinner.svg" alt="loader" width="100" height="100" />
+    </div>
     <div class="w-full h-full font-poppins" id="content">
         <header class="w-full max-md:px-6  px-12 fixed z-20" id="mainNavbar">
-            <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-6">
+            <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-4">
                 <div class="w-fit">
                     <a href="index.html" class="text-primary uppercase font-normal text-2xl">
-                        <img src="images/logo.png" alt="logo" class="h-20" />
+                        <img src="images/logo.png" alt="logo" class="h-24" />
                     </a>
                 </div>
 
@@ -100,15 +103,18 @@
                             <i class="fas fa-phone mr-2"></i><a href="tel:+61 481 351 341"> +61 481 351 341</a>
                         </div>
 
-                        <button type="button" id="request-callback-btn"
-                            class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-                            Drop your Resume
-                            <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-                            </svg>
-                        </button>
+                        <a href="landing.html">
+                            <button type="button"
+                                class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+                                Drop your Resume
+                                <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                                    xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                </svg>
+                            </button>
+                        </a>
                     </div>
                 </nav>
 
@@ -176,15 +182,17 @@
                     <li><a href="contact.html" class="block hover:text-sky-600">Contact US</a></li>
                 </ul>
 
-                <button type="button" id="request-mob-callback-btn"
-                    class="flex group font-normal uppercase text-14 mt-10 w-full justify-center font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-                    Drop your Resume
-                    <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                        stroke-width="2">
-                        <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                </button>
+                <a href="landing.html">
+                    <button type="button"
+                        class="flex group font-normal uppercase text-14 mt-10 w-full justify-center font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+                        Drop your Resume
+                        <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                </a>
             </div>
         </div>
 
@@ -868,7 +876,14 @@
     <script src="js/aos.js"></script>
     <script src="js/custom.js"></script>
 
-
+    <script>
+        $("#content").hide();
+        $(document).ready(function () {
+            AOS.init();
+            $("#loader").hide();
+            $("#content").show();
+        });
+    </script>
 </body>
 
 </html>

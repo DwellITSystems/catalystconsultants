@@ -33,12 +33,16 @@
 </head>
 
 <body>
+  <div class="bg-black w-full h-screen flex items-center justify-center" id="loader">
+    <img src="images/infinite-spinner.svg" alt="loader" width="100" height="100" />
+  </div>
+
   <div class="w-full h-full font-poppins" id="content">
     <header class="w-full max-md:px-6  px-12 fixed z-20" id="mainNavbar">
-      <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-6">
+      <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-4">
         <div class="w-fit">
           <a href="index.html" class="text-primary uppercase font-normal text-2xl">
-            <img src="images/logo.png" alt="logo" class="h-20" />
+            <img src="images/logo.png" alt="logo" class="h-24" />
           </a>
         </div>
 
@@ -96,15 +100,17 @@
               <i class="fas fa-phone mr-2"></i><a href="tel:+61 481 351 341"> +61 481 351 341</a>
             </div>
 
-            <button type="button" id="request-callback-btn"
-              class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-              Drop your Resume
-              <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                stroke-width="2">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
+            <a href="landing.html">
+              <button type="button"
+                class="flex group font-normal uppercase text-14 font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+                Drop your Resume
+                <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </button>
+            </a>
           </div>
         </nav>
 
@@ -169,15 +175,16 @@
           <li><a href="contact.html" class="block hover:text-sky-600">Contact US</a></li>
         </ul>
 
-        <button type="button" id="request-mob-callback-btn"
-          class="flex group font-normal uppercase text-14 mt-10 w-full justify-center font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
-          Drop your Resume
-          <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
-            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-
+        <a href="landing.html">
+          <button type="button"
+            class="flex group font-normal uppercase text-14 mt-10 w-full justify-center font-poppins items-center bg-primary text-white px-8 py-4 rounded hover:bg-primary/70 transition duration-300 shadow-md">
+            Drop your Resume
+            <svg class="ml-2 w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </a>
       </div>
     </div>
 
@@ -259,7 +266,7 @@
       </div>
     </section> -->
 
-    <section class="w-full max-md:px-6 px-20 py-20" data-aos="fade-up" data-aos-duration="1000" id="main">
+    <section class="w-full max-md:px-6 px-20 py-20 bg-primary/15" data-aos="fade-up" data-aos-duration="1000" id="main">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Services</h2>
         <p>
@@ -328,7 +335,7 @@
         </div>
     </section>
 
-    <section id="employeers-details" class="bg-gray-100 border-b border-t py-20 px-20 max-md:px-6 " data-aos="fade-up"
+    <section id="employeers-details" class="bg-white border-b border-t py-20 px-20 max-md:px-6 " data-aos="fade-up"
       data-aos-duration="1000">
 
       <div class="w-full text-center">
@@ -342,8 +349,7 @@
       <div class="flex flex-col lg:flex-row items-center gap-16 pt-20 h-full">
 
         <div class="w-full lg:w-1/2 flex items-center h-full">
-          <img src="images/12.png" alt="Process Image"
-            class="w-full h-auto object-cover rounded-lg shadow" />
+          <img src="images/12.png" alt="Process Image" class="w-full h-auto object-cover rounded-lg shadow" />
         </div>
 
         <div class="w-full lg:w-1/2 relative">
@@ -423,7 +429,7 @@
       </div>
     </section>
 
-    <section id="employee-details" class=" bg-gray-100 border-b border-t py-20 px-20 max-md:px-6 ">
+    <section id="employee-details" class="bg-white border-b border-t py-20 px-20 max-md:px-6 ">
 
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">For Employee</h2>
@@ -504,7 +510,8 @@
       </div>
     </section>
 
-    <section class="bg-white border-b border-t py-20 max-md:px-6 px-20" data-aos="fade-up" data-aos-duration="1000">
+    <section class="bg-primary/15 border-b border-t py-20 max-md:px-6 px-20" data-aos="fade-up"
+      data-aos-duration="1000">
       <div class="max-w-7xl mx-auto text-center mb-12">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Recruitment Process</h2>
         <p class="text-black text-md">
@@ -514,7 +521,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 w-full font-poppins">
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/understanding-needs.jpg" class="w-full h-[4.4rem] rounded-full" alt="" />
@@ -530,7 +537,7 @@
         </div>
 
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/candidate-sourcing.jpg" class="w-full h-[4.4rem] rounded-full object-cover" alt="" />
@@ -547,7 +554,7 @@
         </div>
 
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/screening-assessment.jpg" class="w-full h-[4.4rem] rounded-full object-cover" alt="" />
@@ -563,7 +570,7 @@
         </div>
 
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/training-preparation.jpg" class="w-full h-[4.4rem] rounded-full object-cover" alt="" />
@@ -579,7 +586,7 @@
         </div>
 
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/placementsupport.jpg" class="w-full h-[4.4rem] rounded-full object-cover" alt="" />
@@ -594,7 +601,7 @@
         </div>
 
         <div
-          class="bg-gray-100/50 border p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
+          class="bg-white border border-gray-300 p-4 rounded transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-md">
           <div class="w-full flex items-start gap-4" data-aos="fade-up" data-aos-duration="1200">
             <div class="w-1/6 h-full flex items-center">
               <img src="images/onboarding-readiness.jpg" class="w-full h-[4.4rem] rounded-full object-cover" alt="" />
@@ -624,7 +631,7 @@
       </div> -->
     </section>
 
-    <section class="w-full px-20 max-md:px-6  py-20 border-b bg-gray-100">
+    <section class="w-full px-20 max-md:px-6  py-20 border-b bg-white">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Success Stories That Inspire</h2>
         <p class="text-black text-md">Discover how real candidates transformed their careers through our tailored
@@ -636,7 +643,7 @@
           <div class="swiper-wrapper pb-16">
 
             <div class="swiper-slide p-4">
-              <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
+              <div class="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
                 <div class="flex items-center gap-4 mb-4">
                   <img src="images/testim/1.png" alt="Client 1" class="w-14 h-14 rounded-full object-cover">
                   <div>
@@ -652,7 +659,7 @@
             </div>
 
             <div class="swiper-slide p-4">
-              <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
+              <div class="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
                 <div class="flex items-center gap-4 mb-4">
                   <img src="images/testim/2.png" alt="Client 1" class="w-14 h-14 rounded-full object-cover">
                   <div>
@@ -669,7 +676,7 @@
             </div>
 
             <div class="swiper-slide p-4">
-              <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
+              <div class="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
                 <div class="flex items-center gap-4 mb-4">
                   <img src="images/testim/3.png" alt="Client 1" class="w-14 h-14 rounded-full object-cover">
                   <div>
@@ -686,7 +693,7 @@
             </div>
 
             <div class="swiper-slide p-4">
-              <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
+              <div class="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
                 <div class="flex items-center gap-4 mb-4">
                   <img src="images/testim/4.png" alt="Client 1" class="w-14 h-14 rounded-full object-cover">
                   <div>
@@ -703,7 +710,7 @@
             </div>
 
             <div class="swiper-slide p-4">
-              <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
+              <div class="bg-gray-100 border border-gray-300 p-6 rounded-xl shadow-md hover:shadow-lg transition group">
                 <div class="flex items-center gap-4 mb-4">
                   <img src="images/testim/5.png" alt="Client 1" class="w-14 h-14 rounded-full object-cover">
                   <div>
@@ -799,7 +806,7 @@
     </section>
     --->
 
-    <section class="w-full px-20 max-md:px-6 py-20 border-b">
+    <section class="w-full px-20 max-md:px-6 py-20 border-b bg-primary/15" data-aos="fade-up" data-aos-duration="1000">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Hot Jobs</h2>
         <p class="text-black text-md">Find urgent job openings across top industries with immediate start options</p>
@@ -917,7 +924,7 @@
         </div>
     </section>
 
-    <section class="bg-gray-100 border-b py-20 px-20 max-md:px-6" data-aos="fade-up" data-aos-duration="1000">
+    <section class="bg-white border-b py-20 px-20 max-md:px-6" data-aos="fade-up" data-aos-duration="1000">
 
       <div class="w-full text-center mb-12">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Frequently Asked Questions</h2>
@@ -926,7 +933,7 @@
       <div class="w-3/4 mx-auto max-md:w-full">
 
         <!-- FAQ Item 1 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-gray-300/20 transition">
+        <div class="border border-gray-300 bg-gray-100 mb-2 hover:bg-gray-200 transition">
           <button onclick="toggleFAQ('faq1')" class="w-full text-left flex justify-between items-center px-6 py-4">
             <span class="font-medium text-md max-md:text-sm">Do candidates need to register with you?</span>
             <svg id="faq1-icon" class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none"
@@ -948,7 +955,7 @@
         </div>
 
         <!-- FAQ Item 2 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-gray-300/20 transition">
+        <div class="border border-gray-300 bg-gray-100 mb-2 hover:bg-gray-200 transition">
           <button onclick="toggleFAQ('faq2')" class="w-full text-left flex justify-between items-center px-6 py-4">
             <span class="font-medium text-md max-md:text-sm">Do you have partner companies/institutions you collaborate
               with?</span>
@@ -968,7 +975,7 @@
         </div>
 
         <!-- FAQ Item 3 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-gray-300/20 transition">
+        <div class="border border-gray-300 bg-gray-100 mb-2 hover:bg-gray-200 transition">
           <button onclick="toggleFAQ('faq3')" class="w-full text-left flex justify-between items-center px-6 py-4">
             <span class="font-medium text-md max-md:text-sm">What makes Catalyst different from others in the same
               field?</span>
@@ -1016,7 +1023,8 @@
                 US</a></li>
             <li><a href="about.html#whoweare" class="hover:text-primary hover:font-medium transition">Who We Are</a>
             </li>
-            <li><a href="about.html#ourrecruitmentprocess" class="hover:text-primary hover:font-medium transition">Our Recruitment Process</a>
+            <li><a href="about.html#ourrecruitmentprocess" class="hover:text-primary hover:font-medium transition">Our
+                Recruitment Process</a>
           </ul>
         </div>
 
@@ -1269,25 +1277,32 @@
   <script src="js/custom.js"></script>
 
   <script>
-
-    $("#employee-details").hide();
-    $("#employeers-details").show();
-
-    $("#employeers-btn").click(function () {
+    $("#content").hide();
+    $(document).ready(function () {
       AOS.init();
-      $("#employeers-details").show();
+      $("#loader").hide();
+      $("#content").show();
+
       $("#employee-details").hide();
-      $("#employeers").addClass("border-b-4 border-primary text-primary");
-      $("#employee").removeClass("border-b-4 border-primary text-primary");
+      $("#employeers-details").show();
+
+      $("#employeers-btn").click(function () {
+        AOS.init();
+        $("#employeers-details").show();
+        $("#employee-details").hide();
+        $("#employeers").addClass("border-b-4 border-primary text-primary");
+        $("#employee").removeClass("border-b-4 border-primary text-primary");
+      });
+
+      $("#employee-btn").click(function () {
+        AOS.init();
+        $("#employee-details").show();
+        $("#employeers-details").hide();
+        $("#employee").addClass("border-b-4 border-primary text-primary");
+        $("#employeers").removeClass("border-b-4 border-primary text-primary");
+      });
     });
 
-    $("#employee-btn").click(function () {
-      AOS.init();
-      $("#employee-details").show();
-      $("#employeers-details").hide();
-      $("#employee").addClass("border-b-4 border-primary text-primary");
-      $("#employeers").removeClass("border-b-4 border-primary text-primary");
-    });
 
     function toggleFAQ(id) {
       // Get all FAQ contents and icons
