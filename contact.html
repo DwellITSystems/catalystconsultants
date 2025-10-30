@@ -508,8 +508,11 @@
         $("#content").hide();
         $(document).ready(function () {
             AOS.init();
-            $("#loader").hide();
-            $("#content").show();
+
+            setTimeout(function () {
+                $("#loader").hide();
+                $("#content").show();
+            }, 2000);
         });
     </script>
 </body>
