@@ -33,8 +33,11 @@
 </head>
 
 <body>
-  <div class="bg-black w-full h-screen flex items-center justify-center" id="loader">
-    <img src="images/infinite-spinner.svg" alt="loader" width="100" height="100" />
+  <div class="bg-black w-full h-screen flex flex-col items-center justify-center" id="loader">
+    <div class="animate-spin duration-[3s]">
+      <img src="images/c-logo.png" alt="loader" width="40" height="40" class="" />
+    </div>
+    <p class="mt-6 font-semibold flex text-white">Loading<span class="loading-dots"></span></p>
   </div>
 
   <div class="w-full h-full font-poppins" id="content">
@@ -195,16 +198,16 @@
           <video class="w-full h-auto max-lg:h-full video-mask max-lg:hidden block" src="/videos/1.mp4" autoplay loop
             muted playsinline></video>
 
-          <video class="w-full h-auto max-lg:h-full video-mask max-lg:block hidden" src="/videos/2.mp4" autoplay loop
-            muted playsinline></video>
+          <video class="w-full h-auto max-lg:h-full video-mask max-lg:block hidden object-cover" src="/videos/2.mp4"
+            autoplay loop muted playsinline></video>
 
           <!-- <img src="images/banner-1.jpg" alt="Banner Image"
             class="w-full h-auto max-lg:h-full object-cover hidden max-lg:block" /> -->
 
           <div
             class="absolute inset-0 bg-black/30 z-20 w-full h-full flex justify-center flex-col text-white px-16 max-md:px-6">
-            <h2 class="text-5xl lg:text-7xl max-w-3xl font-bold font-poppins mb-4 text-border-spt">
-              Connecting talent, building communities.
+            <h2 id="animatedText" class="text-5xl lg:text-7xl max-w-3xl font-bold font-poppins mb-4 text-border-spt">
+
             </h2>
 
             <p class="text-base lg:text-base font-poppins mb-6 max-w-3xl">
@@ -266,8 +269,7 @@
       </div>
     </section> -->
 
-    <section class="w-full max-md:px-6 px-20 py-20 bg-[#37246933]" data-aos="fade-up" data-aos-duration="1000"
-      id="main">
+    <section class="w-full max-md:px-6 px-20 py-20 bg-gray-100" data-aos="fade-up" data-aos-duration="1000" id="main">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Services</h2>
         <p>
@@ -336,7 +338,7 @@
         </div>
     </section>
 
-    <section id="employeers-details" class="bg-[#37246933] border-b border-t border-gray-300 py-20 px-20 max-md:px-6 "
+    <section id="employeers-details" class="bg-white border-b border-t border-gray-300 py-20 px-20 max-md:px-6 "
       data-aos="fade-up" data-aos-duration="1000">
 
       <div class="w-full text-center">
@@ -430,7 +432,7 @@
       </div>
     </section>
 
-    <section id="employee-details" class="bg-[#37246933] border-b border-t border-gray-300 py-20 px-20 max-md:px-6 ">
+    <section id="employee-details" class="bg-white border-b border-t border-gray-300 py-20 px-20 max-md:px-6 ">
 
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">For Employee</h2>
@@ -511,7 +513,7 @@
       </div>
     </section>
 
-    <section class="bg-[#37246933] border-b border-gray-300 py-20 max-md:px-6 px-20" data-aos="fade-up"
+    <section class="bg-gray-100 border-b border-gray-300 py-20 max-md:px-6 px-20" data-aos="fade-up"
       data-aos-duration="1000">
       <div class="max-w-7xl mx-auto text-center mb-12">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Our Recruitment Process</h2>
@@ -632,7 +634,7 @@
       </div> -->
     </section>
 
-    <section class="w-full px-20 max-md:px-6  py-20 border-b border-gray-300 bg-[#37246933]" data-aos="fade-up"
+    <section class="w-full px-20 max-md:px-6  py-20 border-b border-gray-300 bg-white" data-aos="fade-up"
       data-aos-duration="1000">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Success Stories That Inspire</h2>
@@ -808,7 +810,7 @@
     </section>
     --->
 
-    <section class="w-full px-20 max-md:px-6 py-20 border-b border-gray-300 bg-[#37246933]" data-aos="fade-up"
+    <section class="w-full px-20 max-md:px-6 py-20 border-b border-gray-300 bg-gray-100" data-aos="fade-up"
       data-aos-duration="1000">
       <div class="w-full text-center">
         <h2 class="text-3xl lg:text-5xl font-bold mb-6 text-black font-poppins">Hot Jobs</h2>
@@ -927,7 +929,7 @@
         </div>
     </section>
 
-    <section class="bg-[#37246933] border-b border-gray-300 py-20 px-20 max-md:px-6" data-aos="fade-up"
+    <section class="bg-white border-b border-gray-300 py-20 px-20 max-md:px-6" data-aos="fade-up"
       data-aos-duration="1000">
 
       <div class="w-full text-center mb-12">
@@ -937,8 +939,9 @@
       <div class="w-3/4 mx-auto max-md:w-full">
 
         <!-- FAQ Item 1 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-primary/40 transition">
-          <button onclick="toggleFAQ('faq1')" class="w-full text-left flex justify-between items-center px-6 py-4">
+        <div class="border border-gray-300 bg-gray-100 mb-2 transition">
+          <button onclick="toggleFAQ('faq1')"
+            class="w-full text-left flex justify-between items-center px-6 py-4 hover:bg-primary hover:text-white ">
             <span class="font-medium text-md max-md:text-sm">Do candidates need to register with you?</span>
             <svg id="faq1-icon" class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none"
               stroke="currentColor" viewBox="0 0 24 24">
@@ -946,7 +949,7 @@
             </svg>
           </button>
 
-          <div id="faq1" class="faq-content hidden mt-2 text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
+          <div id="faq1" class="faq-content hidden text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
             <p>Yes, registration is required to ensure the best match:</p>
             <ul class="pl-5 list-disc list-inside mt-2">
               <li>Complete a simple <b>online application</b> with your details and experience.</li>
@@ -959,8 +962,9 @@
         </div>
 
         <!-- FAQ Item 2 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-primary/40 transition">
-          <button onclick="toggleFAQ('faq2')" class="w-full text-left flex justify-between items-center px-6 py-4">
+        <div class="border border-gray-300 bg-gray-100 mb-2 transition">
+          <button onclick="toggleFAQ('faq2')"
+            class="w-full text-left flex justify-between items-center px-6 py-4 hover:bg-primary hover:text-white ">
             <span class="font-medium text-md max-md:text-sm">Do you have partner companies/institutions you collaborate
               with?</span>
             <svg id="faq2-icon" class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none"
@@ -968,7 +972,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div id="faq2" class="faq-content hidden mt-2 text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
+          <div id="faq2" class="faq-content hidden text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
             <p>
               Yes, Catalyst works closely with a range of Australian employers across industries, as well as overseas
               institutions and training partners, to ensure a steady flow of skilled candidates and a seamless
@@ -979,8 +983,9 @@
         </div>
 
         <!-- FAQ Item 3 -->
-        <div class="border border-gray-300 bg-white mb-2 hover:bg-primary/40 transition">
-          <button onclick="toggleFAQ('faq3')" class="w-full text-left flex justify-between items-center px-6 py-4">
+        <div class="border border-gray-300 bg-gray-100 mb-2transition">
+          <button onclick="toggleFAQ('faq3')"
+            class="w-full text-left flex justify-between items-center px-6 py-4 hover:bg-primary hover:text-white ">
             <span class="font-medium text-md max-md:text-sm">What makes Catalyst different from others in the same
               field?</span>
             <svg id="faq3-icon" class="faq-icon w-5 h-5 transform transition-transform duration-300" fill="none"
@@ -988,7 +993,7 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
-          <div id="faq3" class="faq-content hidden mt-2 text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
+          <div id="faq3" class="faq-content hidden text-black bg-gray-300/50 py-6 px-6 border-t border-gray-300">
             <p>
               Catalyst isn’t just a recruitment agency — we are a <b>people-focused catalyst</b> for opportunity. We
               combine local expertise with global reach, ensuring that businesses find the talent they need and
@@ -1003,7 +1008,7 @@
 
     </section>
 
-    <footer class="bg-primary/50 text-black" data-aos="fade-up" data-aos-duration="1000">
+    <footer class="bg-white text-black" data-aos="fade-up" data-aos-duration="1000">
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 font-poppins  pt-16 pb-16 px-6">
         <div>
@@ -1057,7 +1062,7 @@
       <!-- Bottom Bar -->
       <div class="py-2 bg-primary/30 border-t border-gray-400/50 pt-5 text-center text-sm text-gray-800">
         <p class="font-bold text-primary mb-2 mt-0">ABN 17357248231</p>
-        <p class="mb-0">© 2025 Catalyst Consult. Developed By <a href="https://dwellitsystems.com/" target="_blank"
+        <p class="mb-2">© 2025 Catalyst Consult. Developed By <a href="https://dwellitsystems.com/" target="_blank"
             class="text-primary">DwellIT Systems.</a></p>
       </div>
     </footer>
@@ -1289,6 +1294,7 @@
       setTimeout(function () {
         $("#loader").hide();
         $("#content").show();
+        loadText();
       }, 2000);
 
 
@@ -1311,6 +1317,33 @@
         $("#employeers").removeClass("border-b-4 border-primary text-primary");
       });
     });
+
+    function loadText() {
+      const text = " Connecting talent, building communities.";
+      const element = document.getElementById("animatedText");
+      let i = 0;
+      let typingStarted = false;
+
+      function typeWriter() {
+        if (i < text.length) {
+          element.innerHTML = text.substring(0, i + 1);
+          i++;
+          setTimeout(typeWriter, 80); // typing speed
+        }
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !typingStarted) {
+            typingStarted = true;
+            typeWriter();
+          }
+        });
+      }, { threshold: 0.6 }); // start when 30% of element is visible
+
+      observer.observe(element);
+    }
+
 
 
     function toggleFAQ(id) {

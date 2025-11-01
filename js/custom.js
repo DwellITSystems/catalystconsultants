@@ -181,7 +181,7 @@ jQuery(document).ready(function () {
 
     setTimeout(() => {
         jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
-    }, 25000);
+    }, 35000);
 
     jQuery(".job-details-btn").click(function () {
         jQuery("#job-details-popup").removeClass('hidden').addClass('flex');

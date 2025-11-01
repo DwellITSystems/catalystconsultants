@@ -35,9 +35,14 @@
 </head>
 
 <body>
-    <div class="bg-black w-full h-screen flex items-center justify-center" id="loader">
-        <img src="images/infinite-spinner.svg" alt="loader" width="100" height="100" />
+    <div class="bg-black w-full h-screen flex flex-col items-center justify-center" id="loader">
+        <div class="animate-spin duration-[3s]">
+            <img src="images/c-logo.png" alt="loader" width="40" height="40" class="" />
+        </div>
+        <p class="mt-6 font-semibold flex text-white">Loading<span class="loading-dots"></span></p>
     </div>
+
+
     <div class="w-full h-full font-poppins" id="content">
         <header class="w-full max-md:px-6  px-12 fixed z-20" id="mainNavbar">
             <div class="mx-auto flex items-center justify-between border-b border-gray-50/20 py-4">
