@@ -36,11 +36,11 @@
 <body class="bg-cover bg-center bg-no-repeat min-h-screen h-full"
     style="background-image: url('/images/banner-1.jpg');">
 
-    <div class="bg-black w-full h-screen flex flex-col items-center justify-center" id="loader">
+    <div class="bg-white w-full h-screen flex flex-col items-center justify-center" id="loader">
         <div class="animate-spin duration-[3s]">
             <img src="images/c-logo.png" alt="loader" width="40" height="40" class="" />
         </div>
-        <p class="mt-6 font-semibold flex text-white">Loading<span class="loading-dots"></span></p>
+        <p class="mt-6 font-semibold flex text-black">Loading<span class="loading-dots"></span></p>
     </div>
 
     <div class="bg-black/65 w-full min-h-screen h-full flex items-center justify-center p-3 xl:p-4" id="content">
@@ -147,7 +147,7 @@
             setTimeout(function () {
                 $("#loader").hide();
                 $("#content").show();
-            }, 2000);
+            }, 1000);
         })
     </script>
 
