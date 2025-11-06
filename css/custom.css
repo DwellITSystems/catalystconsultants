@@ -149,3 +149,7 @@ body .swiper-pagination-bullet-active{
 	position: absolute;
   }
 }
+
+ .pt-4s{
+	padding-top: 1rem;
+  }

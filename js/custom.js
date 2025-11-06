@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
 
             // Toggle visibility
             menu.classList.toggle('open-slideToggle');
-            menu.classList.toggle('pt-4');
+            menu.classList.toggle('pt-4s');
 
             // Toggle rotation class using parent <li> or group
             button.classList.toggle('open');
@@ -175,13 +175,13 @@ jQuery(document).ready(function () {
         jQuery("#drop-your-resume-popup").removeClass('flex').addClass('hidden');
     });
 
-    jQuery("#request-closeModal-Btn").click(function () {
-        jQuery("#request-callback-popup").removeClass('flex').addClass('hidden');
-    });
+    // jQuery("#request-closeModal-Btn").click(function () {
+    //     jQuery("#request-callback-popup").removeClass('flex').addClass('hidden');
+    // });
 
-    setTimeout(() => {
-        jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
-    }, 35000);
+    // setTimeout(() => {
+    //     jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
+    // }, 35000);
 
     jQuery(".job-details-btn").click(function () {
         jQuery("#job-details-popup").removeClass('hidden').addClass('flex');

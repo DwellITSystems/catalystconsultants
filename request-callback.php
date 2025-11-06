@@ -9,6 +9,8 @@ require 'PHPMailer/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars($_POST["name"]);
+    $title = htmlspecialchars($_POST["title"]);
+    $company = htmlspecialchars($_POST["company"]);
     $email = htmlspecialchars($_POST["email"]);
     $phone = htmlspecialchars($_POST["phone"]);
     $employed = htmlspecialchars($_POST["employed"]);
@@ -75,6 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="container">
                 <div class="heading">New Career Form Submission</div>
                 <div class="info"><span class="label">Name:</span> ' . $name . '</div>
+                <div class="info"><span class="label">Title:</span> ' . $title . '</div>
+                <div class="info"><span class="label">Company:</span> ' . $company . '</div>
                 <div class="info"><span class="label">Email:</span> ' . $email . '</div>
                 <div class="info"><span class="label">Phone:</span> ' . $phone . '</div>
                 <div class="info"><span class="label">Currently in Australia:</span> ' . $employed . '</div>
