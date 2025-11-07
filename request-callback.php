@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Port = 465;
 
         // Sender & Recipient
-        $mail->setFrom('notifications@dwellitsystems.com', 'Website Notification');
-        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Callback Request');   
+        $mail->setFrom('notifications@dwellitsystems.com', 'Employer - Request Call Back');
+        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Employer - Request Call Back');   
         
         // File Attachment (if uploaded)
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -89,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
         //echo "Message sent successfully!";
-        echo '<script>alert("Message sent successfully!"); window.location.href="https://casterlogistics.com/home";</script>';
+        echo '<script>alert("Message sent successfully!"); window.location.href="index.html";</script>';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
