@@ -30,13 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->setFrom('notifications@dwellitsystems.com', 'Website Notification');
         $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Callback Request');   
         
-        // File Attachment (if uploaded)
+          // ✅ Handle file upload safely
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
             $uploadFilePath = $_FILES['file']['tmp_name'];
-            $uploadFileName = $_FILES['file']['name'];
+            $uploadFileName = basename($_FILES['file']['name']);
             $mail->addAttachment($uploadFilePath, $uploadFileName);
+        } else {
+            error_log('File upload error: ' . ($_FILES['file']['error'] ?? 'No file uploaded'));
         }
 
+        
         // Email Content
         $mail->isHTML(true);
         $mail->Subject = 'Landing Page';
