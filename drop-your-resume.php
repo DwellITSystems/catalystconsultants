@@ -21,22 +21,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.dwellitsystems.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'notifications@dwellitsystems.com';
-        $mail->Password = 'Dell@2011';
+        $mail->Username = 'mailer@dwellitsystems.com';
+        $mail->Password = 'f21Z0W2NUCHi8xFBJ1KmxxaOkuetIDXEPaYm0AoD';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         // Sender & Recipient
-        $mail->setFrom('notifications@dwellitsystems.com', 'Website Notification');
-        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Website Callback Request');   
+        $mail->setFrom('mailer@dwellitsystems.com', 'Website Notification');
+        $mail->addAddress('vibz@catalystconsultants.au', 'Website - New Resume Uploaded');   
         
-        // File Attachment (if uploaded)
+          // ✅ Handle file upload safely
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
             $uploadFilePath = $_FILES['file']['tmp_name'];
-            $uploadFileName = $_FILES['file']['name'];
+            $uploadFileName = basename($_FILES['file']['name']);
             $mail->addAttachment($uploadFilePath, $uploadFileName);
+        } else {
+            error_log('File upload error: ' . ($_FILES['file']['error'] ?? 'No file uploaded'));
         }
 
+        
         // Email Content
         $mail->isHTML(true);
         $mail->Subject = 'Landing Page';
@@ -78,14 +81,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="info"><span class="label">Email:</span> ' . $email . '</div>
                 <div class="info"><span class="label">Phone:</span> ' . $phone . '</div>
                 <div class="info"><span class="label">Currently in Australia:</span> ' . $employed . '</div>
-                <div class="info"><span class="label">City:</span> ' . $message . '</div>                                
+                <div class="info"><span class="label">Message:</span> ' . $message . '</div>                                
             </div>
             </body>
             </html>';
 
         $mail->send();
         //echo "Message sent successfully!";
-        echo '<script>alert("Message sent successfully!"); window.location.href="https://casterlogistics.com/home";</script>';
+        echo '<script>alert("Resume uploaded successfully!"); window.location.href="index.html";</script>';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
