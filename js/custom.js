@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+$(document).ready(function () {
     AOS.init();
 
     const sideMenu = document.getElementById("sideMenu");
@@ -167,20 +167,20 @@ jQuery(document).ready(function () {
     });
 
 
-    jQuery("#request-callback-btn, #request-mob-callback-btn").click(function () {
-        jQuery("#drop-your-resume-popup").removeClass('hidden').addClass('flex');
+    $("#request-callback-btn, #request-mob-callback-btn").click(function () {
+        $("#drop-your-resume-popup").removeClass('hidden').addClass('flex');
     });
 
-    jQuery("#drop-your-resume-closeModal-Btn").click(function () {
-        jQuery("#drop-your-resume-popup").removeClass('flex').addClass('hidden');
+    $("#drop-your-resume-closeModal-Btn").click(function () {
+        $("#drop-your-resume-popup").removeClass('flex').addClass('hidden');
     });
 
-    // jQuery("#request-closeModal-Btn").click(function () {
-    //     jQuery("#request-callback-popup").removeClass('flex').addClass('hidden');
+    // $("#request-closeModal-Btn").click(function () {
+    //     $("#request-callback-popup").removeClass('flex').addClass('hidden');
     // });
 
     // setTimeout(() => {
-    //     jQuery("#request-callback-popup").removeClass('hidden').addClass('flex');
+    //     $("#request-callback-popup").removeClass('hidden').addClass('flex');
     // }, 35000);
 
 
@@ -319,13 +319,13 @@ jQuery(document).ready(function () {
     }
 
 
-    jQuery(".job-details-btn").click(function (evt) {
-        var id = jQuery(this).attr("id");
+    $(".job-details-btn").click(function (evt) {
+        var id = $(this).attr("id");
         openJobModal(id);
-        jQuery("#job-details-popup").removeClass('hidden').addClass('flex');
+        $("#job-details-popup").removeClass('hidden').addClass('flex');
     });
 
-    jQuery("#job-closeModal-Btn").click(function () {
-        jQuery("#job-details-popup").removeClass('flex').addClass('hidden');
+    $("#job-closeModal-Btn").click(function () {
+        $("#job-details-popup").removeClass('flex').addClass('hidden');
     });
 });
