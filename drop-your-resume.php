@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.dwellitsystems.com';
+        $mail->Host = 'smtp.stackmail.com';
         $mail->SMTPAuth = true;
         $mail->Username = 'mailer@dwellitsystems.com';
         $mail->Password = 'f21Z0W2NUCHi8xFBJ1KmxxaOkuetIDXEPaYm0AoD';
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Email Content
         $mail->isHTML(true);
-        $mail->Subject = 'Landing Page';
+        $mail->Subject = 'New Resume uploaded';
         $mail->Body = '
             <html>
             <head>
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </head>
             <body>
             <div class="container">
-                <div class="heading">New Career Form Submission</div>
+                <div class="heading">New Resume Submited</div>
                 <div class="info"><span class="label">Name:</span> ' . $name . '</div>
                 <div class="info"><span class="label">Email:</span> ' . $email . '</div>
                 <div class="info"><span class="label">Phone:</span> ' . $phone . '</div>

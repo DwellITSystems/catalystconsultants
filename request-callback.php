@@ -21,16 +21,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         // SMTP Configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.dwellitsystems.com';
+        $mail->Host = 'smtp.stackmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'notifications@dwellitsystems.com';
-        $mail->Password = 'Dell@2011';
+        $mail->Username = 'mailer@dwellitsystems.com';
+        $mail->Password = 'f21Z0W2NUCHi8xFBJ1KmxxaOkuetIDXEPaYm0AoD';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
         // Sender & Recipient
-        $mail->setFrom('notifications@dwellitsystems.com', 'Employer - Request Call Back');
-        $mail->addAddress('emmanual.nebu@dwellitsystems.com', 'Employer - Request Call Back');   
+        $mail->setFrom('mailer@dwellitsystems.com', 'Website Notification');
+        $mail->addAddress('vibz@catalystconsultants.au', 'Employer - Request Call Back');   
         
         // File Attachment (if uploaded)
         if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Email Content
         $mail->isHTML(true);
-        $mail->Subject = 'Landing Page';
+        $mail->Subject = 'Website - Employer Request Call Back';
         $mail->Body = '
             <html>
             <head>
@@ -75,21 +75,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </head>
             <body>
             <div class="container">
-                <div class="heading">New Career Form Submission</div>
+                <div class="heading">Website - Employer Request Call Back</div>
                 <div class="info"><span class="label">Name:</span> ' . $name . '</div>
                 <div class="info"><span class="label">Title:</span> ' . $title . '</div>
                 <div class="info"><span class="label">Company:</span> ' . $company . '</div>
                 <div class="info"><span class="label">Email:</span> ' . $email . '</div>
                 <div class="info"><span class="label">Phone:</span> ' . $phone . '</div>
                 <div class="info"><span class="label">Currently in Australia:</span> ' . $employed . '</div>
-                <div class="info"><span class="label">City:</span> ' . $message . '</div>                                
+                <div class="info"><span class="label">Message:</span> ' . $message . '</div>                                
             </div>
             </body>
             </html>';
 
         $mail->send();
         //echo "Message sent successfully!";
-        echo '<script>alert("Message sent successfully!"); window.location.href="index.html";</script>';
+        echo '<script>alert("Call back request sent successfully!"); window.location.href="index.html";</script>';
     } catch (Exception $e) {
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
